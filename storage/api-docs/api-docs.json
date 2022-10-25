@@ -1,0 +1,908 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel OpenApi Demo Documentation",
+        "description": "L5 Swagger OpenApi description",
+        "contact": {
+            "email": "abdukhalilovazim@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/branch": {
+            "get": {
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "All branches",
+                "description": "This route returns all branches",
+                "operationId": "314b0c97e23d86deaa55ba3325475c28",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "Add to branch",
+                "description": "Add a branch",
+                "operationId": "addToCart",
+                "requestBody": {
+                    "description": "Add to cart",
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "example": "Branch name"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "Branch Address Example"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Branch description"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/cart": {
+            "get": {
+                "tags": [
+                    "Cart"
+                ],
+                "summary": "All carts",
+                "description": "This route returns all carts",
+                "operationId": "87ceca0ea67e25c2ae37d036acf47ce1",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/cart": {
+            "post": {
+                "tags": [
+                    "Cart"
+                ],
+                "summary": "Store new project",
+                "description": "Returns project data",
+                "operationId": "storeProject",
+                "requestBody": {
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/api/v1/customer": {
+            "get": {
+                "tags": [
+                    "Customer"
+                ],
+                "summary": "All customers",
+                "description": "This route returns all customers",
+                "operationId": "645f7ee4e77e0b63e4ef08739c03b848",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/debt": {
+            "get": {
+                "tags": [
+                    "Debt"
+                ],
+                "summary": "All debts",
+                "description": "This route returns all debts",
+                "operationId": "fb9dbd47e504fbaab79c4ac58a287844",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/district": {
+            "get": {
+                "tags": [
+                    "District"
+                ],
+                "summary": "All districts",
+                "description": "This route returns all districts",
+                "operationId": "b384b6884212994e15048b00e78f1ae0",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/invoice": {
+            "get": {
+                "tags": [
+                    "Invoice"
+                ],
+                "summary": "All invoices",
+                "description": "This route returns all invoices",
+                "operationId": "937ae1f45cb916c986e77ed7ba176e32",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/manufacturer": {
+            "get": {
+                "tags": [
+                    "Manufacturer"
+                ],
+                "summary": "All manufacturers",
+                "description": "This route returns all manufacturers",
+                "operationId": "5b79ff7b1eff213aa0d0a31194c70278",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/order": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "summary": "All orders",
+                "description": "This route returns all orders",
+                "operationId": "f37aef02950d33efd1929d3d57c15e66",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/organization": {
+            "get": {
+                "tags": [
+                    "Organization"
+                ],
+                "summary": "All organizations",
+                "description": "This route returns all organizations",
+                "operationId": "5496af49659862c7868d14676f85f480",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/product": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "summary": "All products",
+                "description": "This route returns all products",
+                "operationId": "f8a5ae092371dc9c190b2603ad24fb45",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/productjoininvoice": {
+            "get": {
+                "tags": [
+                    "Product Join Invoice"
+                ],
+                "summary": "All product join invoices",
+                "description": "This route returns all product join invoices",
+                "operationId": "a203599dfc947b318843de5e285de70c",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/region": {
+            "get": {
+                "tags": [
+                    "Region"
+                ],
+                "summary": "All regions",
+                "description": "This route returns all regiones",
+                "operationId": "2dcdddb8ad0db6a6698cbd02115c2d94",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/role": {
+            "get": {
+                "tags": [
+                    "Role"
+                ],
+                "summary": "All roles",
+                "description": "This route returns all roles",
+                "operationId": "cc5fcdf6ed62d9a0f83c31cf696b16e5",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/treatmentregimen": {
+            "get": {
+                "tags": [
+                    "Treatment regimen"
+                ],
+                "summary": "All treatment regimens",
+                "description": "This route returns all treatment regimens",
+                "operationId": "67e8b354f338811546c31ff9a2f691de",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/unit": {
+            "get": {
+                "tags": [
+                    "Unit"
+                ],
+                "summary": "All units",
+                "description": "This route returns all units",
+                "operationId": "18b298c8d243c3eeb6f68b58f60a70a7",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/user": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "All users",
+                "description": "This route returns all users",
+                "operationId": "1b2855f9feee588baaa6800814b2ad66",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "text",
+                                            "example": "Altenwerth, Koelpin and Breitenberg"
+                                        },
+                                        "address": {
+                                            "type": "text",
+                                            "example": "12720 Kuphal Green\\nCristfort, CO 08458"
+                                        },
+                                        "description": {
+                                            "type": "text",
+                                            "example": "Veniam aut officiis molestiae magnam. Necessitatibus assumenda quod adipisci nostrum totam est doloribus. Delectus quis quaerat numquam neque nisi laboriosam sit. Minima voluptatum sed commodi aperiam ut."
+                                        },
+                                        "created_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        },
+                                        "updated_at": {
+                                            "type": "text",
+                                            "example": "2022-10-18T14:57:16.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Branch",
+            "description": "This dropdown belongs to branch"
+        },
+        {
+            "name": "Cart",
+            "description": "This dropdown belongs to Cart"
+        },
+        {
+            "name": "Customer",
+            "description": "This dropdown belongs to Customer"
+        },
+        {
+            "name": "Debt",
+            "description": "This dropdown belongs to Debt"
+        },
+        {
+            "name": "District",
+            "description": "This dropdown belongs to District"
+        },
+        {
+            "name": "Invoice",
+            "description": "This dropdown belongs to Invoice"
+        },
+        {
+            "name": "Manufacturer",
+            "description": "This dropdown belongs to Manufacturer"
+        },
+        {
+            "name": "Order",
+            "description": "This dropdown belongs to Order"
+        },
+        {
+            "name": "Organization",
+            "description": "This dropdown belongs to Organization"
+        },
+        {
+            "name": "Product",
+            "description": "This dropdown belongs to Product"
+        },
+        {
+            "name": "Product Join Invoice",
+            "description": "This dropdown belongs to Product Join Invoice"
+        },
+        {
+            "name": "Region",
+            "description": "This dropdown belongs to Region"
+        },
+        {
+            "name": "Role",
+            "description": "This dropdown belongs to Role"
+        },
+        {
+            "name": "Treatment Regimen",
+            "description": "This dropdown belongs to Treatment Regimen"
+        }
+    ]
+}
